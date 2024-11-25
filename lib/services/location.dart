@@ -26,7 +26,7 @@ class Location {
 
   Future<dynamic> locationData(double latitude, double longitude) async {
     final response = await http.get(Uri.parse(
-        'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=f7ca1a9673f99dec796fba6c3484352f&units=metric'));
+        'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=&units=metric'));
     if (response.statusCode == 200) {
       print(response.body);
       var decodedData = jsonDecode(response.body);
